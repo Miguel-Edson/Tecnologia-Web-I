@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Informativo da Escola</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="painel">
+    <div class="passada">
+        <h2 id="mensagem">Bem-vindo ao painel informativo!</h2>
+        <button onclick="
+            mensagensIndex = (mensagensIndex + 1) % mensagens.length;
+            document.getElementById('mensagem').innerText = mensagens[mensagensIndex];
+        ">
+            >
+        </button>
+    </div>
+
+  <br><br>
+
+    <div id="espaço">
+        <img id="imagem" src="https://via.placeholder.com/200x150?text=Imagem+1" alt="Imagem informativa">
+    </div>
+  <br>
+  <div class="botoes">
+    <button 
+        class="botao-circular"
+        onclick="
+        imagensIndex = (imagensIndex + 1) % imagens.length;
+        document.getElementById('imagem').src = imagens[imagensIndex];
+    ">
+        
+    </button>
+    <button 
+        class="botao-circular"
+        onclick="
+        imagensIndex = (imagensIndex + 1) % imagens.length;
+        document.getElementById('imagem').src = imagens[imagensIndex];
+    ">
+        
+    </button>
+    <button 
+        class="botao-circular"
+        onclick="
+        imagensIndex = (imagensIndex + 1) % imagens.length;
+        document.getElementById('imagem').src = imagens[imagensIndex];
+    ">
+        
+    </button>
+    
+  </div>
+
+  <br><br>
+
+  <p id="paragrafo">Este é um parágrafo informativo que pode ser ocultado e mostrado.</p>
+  <button onclick="
+    const p = document.getElementById('paragrafo');
+    p.style.display = (p.style.display === 'none') ? 'block' : 'none';
+  ">
+    Mostrar/Ocultar parágrafo
+  </button>
+
+  <br><br>
+
+  <button onclick="
+    this.innerText = (this.innerText === 'Clique para mudar este texto') 
+      ? 'Texto alterado!' 
+      : 'Clique para mudar este texto';
+  ">
+    Clique para mudar este texto
+  </button>
+
+</div>
+
+<script>
+  var mensagens = [
+    "Bem-vindo ao painel informativo!",
+    "Lembre-se de entregar suas tarefas!",
+    "Hoje teremos aula de reforço à tarde.",
+    "Confira o mural para novidades!"
+  ];
+  var mensagensIndex = 0;
+
+  var imagens = [
+    "https://placehold.co/600x400",
+    "https://placehold.co/500x400",
+    "https://placehold.co/700x500",
+    "https://placehold.co/500x400",
+    "https://placehold.co/600x600",
+  ];
+  var imagensIndex = 0;
+</script>
+
+</body>
+</html>
