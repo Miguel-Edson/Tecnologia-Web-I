@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Informativo da Escola</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contador-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .contador-botao {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="painel">
+    
+  <div class="contador-area">
+    <button id="contadorBotao" class="botao-circular" onclick="incrementarContador()">0</button>
+    <span id="contadorTexto">Você clicou 0 vezes.</span>
+  </div>
+
+</div>
+
+<script>
+  
+  
+  let contador = 0;
+
+  function incrementarContador() {
+    contador++;
+    document.getElementById('contadorBotao').innerText = contador;
+    document.getElementById('contadorTexto').innerText = `Você clicou ${contador} ${contador === 1 ? 'vez' : 'vezes'}.`;
+  }
+  
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f4f8;
+}
+
+.painel {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.botao-circular {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-circular:hover {
+  background-color: #0056b3;
+}
+
+.contador-area{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+}
